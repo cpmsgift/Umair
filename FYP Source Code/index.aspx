@@ -57,7 +57,7 @@
                  <div class="form-group">
                    <div class="col-md-2"
                     <div class="col-md-6">
-                        <asp:Button ID="loginButton" CssClass="btn btn-default"  runat="server" Text="Login"></asp:Button>
+                        <asp:Button ID="loginButton" CssClass="btn btn-default"  runat="server" Text="Login" OnClick="loginButton_Click"></asp:Button>
                         
 
                     </div>
