@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Umair", ".", "{CEB2C6A2-550E-4EDD-9AE0-D46FD73FEEB7}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_62473"
+		Debug.AspNetCompiler.PhysicalPath = "..\Umair\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62473\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_62473"
+		Release.AspNetCompiler.PhysicalPath = "..\Umair\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62473\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "62473"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEB2C6A2-550E-4EDD-9AE0-D46FD73FEEB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB2C6A2-550E-4EDD-9AE0-D46FD73FEEB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F259C784-6838-4AB8-8D1F-8BB6118EC4C4}
+	EndGlobalSection
+EndGlobal

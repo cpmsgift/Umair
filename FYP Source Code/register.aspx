@@ -6,12 +6,12 @@
 <head runat="server">
      <title>Register</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   
     <!-- Bootstrap CSS -->
  <link rel="stylesheet" href="indexStyle.css" />
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
 
 </head>
 <body>
@@ -25,7 +25,7 @@
     <hr>
             <div id="loginstyle">
                    
-        <div class="container>
+        <div class="container">
             <div class="form-horizontal">
                 <div class="form-group">
                     <asp:Label ID="Label1" runat="server" CssClass="col-md-2 control-label" Text="ID"></asp:Label>
@@ -62,21 +62,16 @@
                     </div>
                 </div>
                  <div class="form-group">
-                    <label for="status" class="col-sm-2 control-label">Status</label>
+                    <label for="ProjectId" class="col-sm-2 control-label">Project Id</label>
                     <div class="col-sm-3">
-                        <select id="status" class="form-control">
-                            <option>Student</option>
-                            <option>Supervisor</option>
-                            <option>Coordinator</option>
-                            <option>HOD</option>
-                            <option>Reviewer</option>
-                        </select>
+                        <asp:DropDownList ID="propID" runat="server">
+                        </asp:DropDownList>
                     </div>
                 </div>
                  <div class="form-group">
                    <div class="col-md-2"
                     <div class="col-md-6">
-                        <asp:Button ID="registerButton" CssClass="btn btn-default" runat="server" Text="Register"></asp:Button>
+                        <asp:Button ID="registerButton" CssClass="btn btn-default" runat="server" Text="Register" OnClick="registerButton_Click"></asp:Button>
                     </div>
                 </div>
 
@@ -86,8 +81,10 @@
 
             </div>
     </div>
+         <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"> </script>
+        </div>
     </form>
-        <script src="js/jquery-1.11.2.min.js"</script>
-    <script src="js/bootstrap.min.js" </script>
+       
 </body>
 </html>

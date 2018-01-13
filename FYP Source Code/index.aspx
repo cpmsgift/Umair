@@ -7,12 +7,12 @@
 
      <title>CPMS</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   
     <!-- Bootstrap CSS -->
  <link rel="stylesheet" href="indexStyle.css" />
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
 </head>
 <body> 
     <form id="form1" runat="server">
@@ -34,13 +34,13 @@
         <div class="container>
             <div class="form-horizontal">
                 <div class="form-group">
-                    <asp:Label ID="Label1" runat="server" CssClass="col-md-2 control-label" Text="Username"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" CssClass="col-md-2 control-label" Placeholder="User Name" Text="Name"></asp:Label>
                     <div class="col-md-3">
                         <asp:TextBox ID="Username" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                 </div>
                 <div class="form-group">
-                    <asp:Label ID="Label2" runat="server" CssClass="col-md-2 control-label" Text="Password"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" CssClass="col-md-2 control-label" Placeholder="Password" Text="Password"></asp:Label>
                     <div class="col-md-3">
                         <asp:TextBox ID="Password" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
@@ -55,11 +55,11 @@
                     </div>
                 </div>
                  <div class="form-group">
-                   <div class="col-md-2"
+                   <div class="col-md-2">
                     <div class="col-md-6">
                         <asp:Button ID="loginButton" CssClass="btn btn-default"  runat="server" Text="Login" OnClick="loginButton_Click"></asp:Button>
                         
-
+                        
                     </div>
                 </div>
 
@@ -76,8 +76,10 @@
 
 
 </div>
+    </div>
+      <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"> </script>
     </form>
-        <script src="js/jquery-1.11.2.min.js"</script>
-    <script src="js/bootstrap.min.js" </script>
+      
 </body>
 </html>
