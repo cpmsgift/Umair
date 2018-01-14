@@ -53,6 +53,20 @@ public partial class register : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@password", Password.Text.Trim());
             cmd.Parameters.AddWithValue("@projectId", propID.Text.Trim());
             cmd.ExecuteNonQuery();
+            /*if ()
+            {
+                ListItem li = new ListItem();
+                li.Value = "#";
+                li.Text = "You have registered successfully";
+                msg.Items.Add(li);
+            }*/
         }
+
+        
+    }
+
+    protected void login_Click1(object sender, EventArgs e)
+    {
+        Response.Redirect("index.aspx");
     }
 }

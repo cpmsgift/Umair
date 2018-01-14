@@ -65,12 +65,11 @@
  <center> <h2>Post New Idea</h2> </center>
                  <br>
 
-                   <div class="col-md-4"
+                   <div class="col-md-8">
                     <div class="col-md-6">
                 <div class="form-group">
   <label for="usr">Project Title:</label>
-  <input type="text" class="form-control" id="usr1">
-  
+  <asp:TextBox ID="TextBox1" class="form-control" runat="server"></asp:TextBox>
 </div>
 
 
@@ -92,8 +91,9 @@
 
                  </div>
     </div>
+         <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"> </script>
     </form>
-        <script src="js/jquery-1.11.2.min.js"</script>
-    <script src="js/bootstrap.min.js" </script>
+       
 </body>
 </html>

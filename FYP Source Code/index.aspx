@@ -58,8 +58,13 @@
                    <div class="col-md-2">
                     <div class="col-md-6">
                         <asp:Button ID="loginButton" CssClass="btn btn-default"  runat="server" Text="Login" OnClick="loginButton_Click"></asp:Button>
-                        
-                        
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:DropDownList ID="reg" runat="server" OnSelectedIndexChanged="reg_SelectedIndexChanged">
+                            <asp:ListItem Value="1">STUDENT</asp:ListItem>
+                            <asp:ListItem Value="2">SUPERVISOR</asp:ListItem>
+                            <asp:ListItem Value="3">COORDINATOR</asp:ListItem>
+                            <asp:ListItem Value="4">FACULTY</asp:ListItem>
+                        </asp:DropDownList>
                     </div>
                 </div>
 

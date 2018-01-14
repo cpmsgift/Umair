@@ -22,7 +22,10 @@ public partial class index : System.Web.UI.Page
         /*using (SqlConnection con= new SqlConnection(connectionString)){
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("select * from User where username=@username and password=@password", con);
+            SqlCommand cmd = new SqlCommand("select * from Studen where st_id=@username and st_password=@password", con);
+            SqlCommand cmd1 = new SqlCommand("select * from Supervisor where st_id=@username and st_password=@password", con);
+            SqlCommand cmd2 = new SqlCommand("select * from Coordinator where st_id=@username and st_password=@password", con);
+            SqlCommand cmd3 = new SqlCommand("select * from Faculty where st_id=@username and st_password=@password", con);
 
             cmd.Parameters.AddWithValue("@username", Username.Text.Trim());
 
@@ -31,20 +34,7 @@ public partial class index : System.Web.UI.Page
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
             DataTable dt = new DataTable();
-
-            da.Fill(dt);
-
-            if (dt.Rows.Count > 0)
-
-            {
-
-                string type = (dt.Rows[0]["type"]).ToString().Trim();
-
-                // store your type row cell value in variable to check condition
-
-
-
-                if (type == "Student")
+               if (type == "Student")
 
                 {
 
@@ -65,19 +55,6 @@ public partial class index : System.Web.UI.Page
                 }
 
 
-
-                else if (type == "SoftwareEngineer")
-
-                {
-
-                    Session["USERID"] = TextBox1.Text;
-
-                    Response.Redirect("Engineer.aspx");
-
-
-
-                }
-
                 else
 
                 {
@@ -86,15 +63,13 @@ public partial class index : System.Web.UI.Page
 
                 }
 
-            }
-
-            else
-
-            {
-
-                ClientScript.RegisterStartupScript(Page.GetType(),"validation", "<script language='javascript'>alert('Invalid Username and Password')</script>");
-
-            }
         }*/
+    }
+
+    protected void reg_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (reg.SelectedValue == "2") {
+            Response.Redirect("SupervisorRegister.aspx");
+        }
     }
 }

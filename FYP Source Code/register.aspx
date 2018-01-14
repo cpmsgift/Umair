@@ -69,12 +69,15 @@
                     </div>
                 </div>
                  <div class="form-group">
-                   <div class="col-md-2"
                     <div class="col-md-6">
                         <asp:Button ID="registerButton" CssClass="btn btn-default" runat="server" Text="Register" OnClick="registerButton_Click"></asp:Button>
+                        &nbsp;&nbsp;
+                        <asp:Button ID="login" CssClass="btn btn-default" runat="server" Text="Login" OnClick="login_Click1" Width="77px"></asp:Button>
+                                                
                     </div>
-                </div>
-
+                     <!--div>
+                         <asp:BulletedList ID="msg" runat="server"></asp:BulletedList>
+                     </div-->
 
             </div>
         </div>
