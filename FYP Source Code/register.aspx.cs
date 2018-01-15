@@ -33,7 +33,7 @@ public partial class register : System.Web.UI.Page
         
         propID.DataSource = table;
         propID.DataValueField = "proj_id"; //The Value of the DropDownList, to get it you should call ddlDepartments.SelectedValue;
-        //propID.DataTextField = "proj_name"; //The Name shown of the DropDownList.
+        propID.DataTextField = "proj_name"; //The Name shown of the DropDownList.
         propID.DataBind();
 
     }
