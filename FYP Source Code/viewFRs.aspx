@@ -14,7 +14,7 @@
  <link rel="stylesheet" href="studentHomeStyle.css" />
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-
+      <link href="Gridstyle.css" rel="stylesheet" type="text/css" />
   
 
 
@@ -86,47 +86,22 @@
                
                   <center> <h2>All Fuctional Requirements</h2> </center>
 
-                   <div class="col-md-3">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                               <li class="list-group-item">FR01</li>
-                               
-  
-                       </div>
-                    </div>
-                   </div>
+                 
+                   <asp:GridView ID="gvFr" runat="server" AutoGenerateColumns="false"  Width="1000px"
 
-                   <div class="col-md-8">
-                        <div class="col-md-8">
-                            <div class="form-group">
-                               <li class="list-group-item">System shall allow user to login.</li>
-  
-                            </div>
-                        </div>  
-                    </div>
+                      AllowPaging="true" PageSize="8"
 
-                  <div class="col-md-3">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                               <li class="list-group-item">FR02</li>
-                               
-  
-                       </div>
-                    </div>
-                   </div>
+                      CssClass="Grid"                    
 
-                   <div class="col-md-8">
-                        <div class="col-md-8">
-                            <div class="form-group">
-                               <li class="list-group-item">System shall allow user to update his/her profile pic.</li>
-  
-                            </div>
-                        </div>  
-                    </div>
+                      AlternatingRowStyle-CssClass="alt"
 
-                
-               </div>
-
+                      PagerStyle-CssClass="pgr" >
+            <Columns>
+                 <asp:BoundField DataField="fr_id" HeaderText="FR ID" />
+                <asp:BoundField DataField="fr_name" HeaderText="Name" />
+                <asp:BoundField DataField="fr_description" HeaderText="Description" />
+            </Columns>
+        </asp:GridView>
 
     </div>
     </form>

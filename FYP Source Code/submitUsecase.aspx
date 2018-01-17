@@ -52,9 +52,9 @@
         Document Submission
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="">Use Cases</a>
-        <a class="dropdown-item" href="">ERD</a>
-          <a class="dropdown-item" href="">Database Schema</a>
+        <a class="dropdown-item" href="submitUsecase.aspx">Create Diagram</a>
+        <a class="dropdown-item" href="uploadDiagram.aspx">Upload Diagram</a>
+          
         
       </div>
     </li>

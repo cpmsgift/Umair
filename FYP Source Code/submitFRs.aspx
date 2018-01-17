@@ -2,9 +2,11 @@
 
 <!DOCTYPE html>
 
+
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Submit FRs</title>
+    <title>FRs</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,20 +14,17 @@
     <!-- Bootstrap CSS -->
  <link rel="stylesheet" href="studentHomeStyle.css" />
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
-
-  
-
-
+   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-    
-         <div class="jumbotron" style="height:10px">
+
+          <div class="jumbotron" style="height:10px">
             <center><h1 style="margin-top:-25px">Student</h1> </center>
              
             
@@ -56,7 +55,7 @@
         Document Submission
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="">Use Cases</a>
+        <a class="dropdown-item" href="submitUsecase.aspx">Use Cases</a>
         <a class="dropdown-item" href="">ERD</a>
           <a class="dropdown-item" href="">Database Schema</a>
         
@@ -78,44 +77,123 @@
       <a class="nav-link" href="index.aspx">Logout</a>
     </li>
 
+
+
+
   </ul>
 </nav>
-            <br>
-              <div class="container">
-               
-                  <center> <h2>Submit Fuctional Requirements</h2> </center>
+            </div>
+        <div class="container">
+            <center><h2>Submit FRs</h2></center>
+            <br/>
 
-                   <div class="col-md-3">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="usr">FR Code:</label>
-                            <input type="frcode" class="form-control" id="frcode">
-  
-                       </div>
-                    </div>
-                   </div>
+        <asp:HiddenField ID="hffr_id" runat="server" />
+       
+                        <table>
+           
+           
 
-                   <div class="col-md-8">
-                        <div class="col-md-8">
-                            <div class="form-group">
-                                <label for="usr">FR:</label>
-                                <input type="fr" class="form-control" id="fr1">
-  
-                            </div>
-                        </div>  
-                    </div>
+            <tr>
+                <td>
+                      
+                    <asp:Label ID="Label1" runat="server" Text="Name: "></asp:Label>
+                </td>
+                
 
-                    <div class="col-md-8">
-                        <div class="col-md-8">
-                  <asp:Button ID="submitFr" CssClass="btn btn-default" runat="server" Text="Submit" />
-                  <asp:Button ID="addMoreFr" CssClass="btn btn-default" runat="server" onClientClick="addAnswer();" Text="Add More"/>
-                    </div>
-                        </div>
-               </div>
+                <td >
+                    <asp:TextBox ID="txtName" class="form-control" runat="server"></asp:TextBox>
 
+                </td>
+                       
+
+
+
+            </tr>
+            </div>
+            </div>
+            <tr>
+                <td>
+                    <asp:Label ID="Label2" runat="server" Text="Description: "></asp:Label>
+                </td>
+              <td>
+                    <asp:TextBox ID="txtDescription" class="form-control" runat="server" ></asp:TextBox>
+                  </td>
+                
+
+
+            </tr>
+          
+
+       
+          
+
+             <tr>
+                <td>
+                    
+                </td>
+                <td colspan="2">
+                    <asp:Button ID="btnSave" CssClass="btn btn-default" runat="server" Text="Save" OnClick="btnSave_Click" />
+                    <asp:Button ID="btnDelete" CssClass="btn btn-default" runat="server" Text="Delete" OnClick="btnDelete_Click" />
+                    <asp:Button ID="btnClear" CssClass="btn btn-default" runat="server" Text="Clear" OnClick="btnClear_Click" />
+                </td>
+
+
+            </tr>
+
+                <tr>
+                <td>
+                    
+                </td>
+                <td colspan="2">
+                    <asp:Label ID="lblSuccessMessage" runat="server" Text="" ForeColor="Green"></asp:Label>
+                </td>
+
+
+            </tr>
+
+                <tr>
+                <td>
+                    
+                </td>
+                <td colspan="2">
+                    <asp:Label ID="lblErrorMessage" runat="server" Text="" ForeColor="Red"></asp:Label>
+                </td>
+
+
+            </tr>
+
+        </table>
+        
+                       
+        <br/>
+            <center><h2>Edit FRs</h2></center>
+            <br/>
+        <asp:GridView ID="gvFr" runat="server" AutoGenerateColumns="false"  Width="1000px"
+
+                      AllowPaging="true" PageSize="8"
+
+                      CssClass="Grid"                    
+
+                      AlternatingRowStyle-CssClass="alt"
+
+                      PagerStyle-CssClass="pgr" >
+            <Columns>
+                 <asp:BoundField DataField="fr_id" HeaderText="FR ID" />
+                <asp:BoundField DataField="fr_name" HeaderText="Name" />
+                
+                
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:LinkButton ID="lnkView" runat="server" CommandArgument='<%# Eval("fr_id") %>' OnClick="lnk_OnClick">Edit</asp:LinkButton>
+                    </ItemTemplate>
+                </asp:TemplateField>
+
+            </Columns>
+        </asp:GridView>
+
+    
     </div>
     </form>
-        <script src="js/jquery-1.11.2.min.js"</script>
-    <script src="js/bootstrap.min.js" </script>
 </body>
 </html>
+

@@ -69,7 +69,6 @@
                 <br>
                 <h2>Project Progress Bar: </h2>
                 <div class="progress">
-                    <!--asp:UpdateProgress ID="UpdateProgress1" runat="server"></!--asp:UpdateProgress-->
                     <div class="progress-bar progress-bar-striped" style="width: 10%"></div>
                 </div>
             </div>

@@ -1,10 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="studentHome1.aspx.cs" Inherits="studentHome1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="uploadDiagram.aspx.cs" Inherits="uploadDiagram" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>StudentMain</title>
+    
+     <title>Upload Diagram</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,8 +21,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
-         <div class="jumbotron" style="height:10px">
+          <div class="jumbotron" style="height:10px">
             <center><h1 style="margin-top:-25px">Student</h1> </center>
              
             
@@ -79,40 +79,17 @@
   </ul>
 </nav>
             <br>
-            <div class="container">
-                <h2>Project Progress</h2>
-                <div class="progress">
-  <div class="progress-bar progress-bar-striped" style="width:10%"></div>
-</div>
-            </div>
-            <br>
-
-            <div class="container">
-                <h2> Next Presentation </h2>
-                 <ul class="list-group">
-    <li class="list-group-item">30th Nov > Requirement Submission</li>
+             <div class="container">
+                <center><h2>Upload Diagram</h2></center>
+    <asp:fileUpload id="FileUploadControl" runat="server" />
+    <asp:ImageButton ID="ImageButton1" runat="server" />
+    <asp:Button runat="server" id="UploadButton" text="Upload" onclick="UploadButton_Click" />
+    <br /><br />
+    <asp:Label runat="server" id="StatusLabel" text="Upload status: " />
     
-  </ul>
-            </div>
-
-   <div class="container">
-  <h2>Next Milestone</h2>
-  <ul class="list-group">
-    <li class="list-group-item">Milestone 1</li>
-    <li class="list-group-item">Milestone 2</li>
-  </ul>
-</div>
-
-    </div>
-    </form>
-
-
-
-
-    <script src="js/jquery-1.11.2.min.js"</script>
-    <script src="js/bootstrap.min.js" </script>
-
-    </div>
+             
+             </div>
     </form>
 </body>
 </html>
+
